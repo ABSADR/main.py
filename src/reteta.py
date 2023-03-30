@@ -9,11 +9,11 @@ class Reteta:
 
     def pregatire(self, bucatarie):
         for ingredient, cantitate in self.ingrediente.items():
-            bucatarie.scazut_produs(ingredient['nume'], ingredient['cantitate'])
+            bucatarie.scadere_produs(ingredient['nume'], ingredient['cantitate'])
 bucatarie=Bucatarie()
 reteta= Reteta('Clatite' , 'lapte')
 bucatarie.scadere_produs('lapte' , 400)
 
-with open('inventar.json', 'r') as file:
+with open('../data/inventar.json', 'r') as file:
     d = json.load(file)
     print(d)
